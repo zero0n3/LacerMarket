@@ -6,9 +6,37 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
+    <header class="navbar-fixed">
+      <nav class="blue">
+        <div class="container nav-wrapper">
+          <%= link_to "LacerMarket", root_path, class:"brand-logo" %>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+              <li><%= link_to "About", about_path %></li>
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+    <ul class="side-nav" id="mobile-demo">
+        <li><%= link_to "About", about_path %></li>
+    </ul>
+
+
+
+
+
+
     <%= yield %>
   </body>
+
+  <script>
+    $(".button-collapse").sideNav();
+  </script>
+
 </html>
