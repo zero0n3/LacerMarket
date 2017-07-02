@@ -16,7 +16,7 @@
 
  @import "materialize";
 
- body {
+body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -24,4 +24,8 @@
 
 main {
   flex: 1 0 auto;
+}
+
+.btn-device {
+  width: 100%;
 }
