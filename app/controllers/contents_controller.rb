@@ -6,7 +6,7 @@ class ContentsController < ApplicationController
   # GET /contents
   # GET /contents.json
   def index
-    @contents = Content.all
+    @contents = Content.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
   # GET /contents/1
@@ -61,7 +61,7 @@ class ContentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_content
-      @content = Content.find(params[:id])
+      @content = Content.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
