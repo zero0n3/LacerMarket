@@ -21,7 +21,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-materialize', github: 'harrybournis/will_paginate-materialize'
 
 
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk', '< 2.0'
 
 #paperclip
 gem "paperclip", "~> 5.0.0"
