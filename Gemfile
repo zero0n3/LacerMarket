@@ -24,7 +24,7 @@ gem 'will_paginate-materialize', github: 'harrybournis/will_paginate-materialize
 gem 'aws-sdk', '< 2.0'
 
 #paperclip
-gem "paperclip", "~> 5.0.0"
+gem 'paperclip', '4.3.7'
 #devise
 gem 'devise'
 #jquery-rails
